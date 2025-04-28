@@ -15,7 +15,7 @@ func NewAccountRepository(db *sql.DB) *AccountRepository {
 	return &AccountRepository{db: db}
 }
 
-func (repository *AccountRepository) Create(account *domain.Account) error {
+func (repository *AccountRepository) Save(account *domain.Account) error {
 	statement, err := repository.db.Prepare(`
 	INSERT INTO accounts (id, name, email, api_key, balance, created_at, updated_at)
 	VALUES ($1, $2, $3, $4, $5, $6, $7)
