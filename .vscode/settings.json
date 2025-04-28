@@ -1,6 +1,11 @@
 {
     "cSpell.words": [
         "github",
+        "godotenv",
+        "healthcheck",
+        "isready",
+        "postgres",
+        "postgresql",
         "uuid"
     ]
 }

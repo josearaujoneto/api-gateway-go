@@ -1,0 +1,19 @@
+@baseUrl = http://127.0.0.1:8080
+
+@apiKey = {{createAccount.response.body.api_key}}
+
+# @name createAccount
+
+POST {{baseUrl}}/accounts
+Content-Type: application/json
+
+{
+
+    "name": "Iris Joana teste",
+    "email": "iris@email.com"
+}
+
+
+### Obter dados da conta
+GET {{baseUrl}}/accounts
+X-API-KEY: {{apiKey}}
